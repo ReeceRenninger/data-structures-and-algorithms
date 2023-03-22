@@ -130,16 +130,21 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  for(let i = 0; i < recipe.ingredients.length; i++){
-    let idxOfIngredients = recipe.ingredients[i];
-    let space = idxOfIngredients.indexOf(' ');
-    let foodItem = idxOfIngredients.slice(space + 1);
-    let nextSpace = idxOfIngredients.indexOf(' ');
-    if(nextSpace !== -1){
-      foodItem = foodItem.slice(0, nextSpace);
-    }
-    result.push(foodItem);
-  }
+  recipe.ingredients.forEach(ingredient => {
+    let withoutAmount = ingredient.slice(ingredient.indexOf(' ') +1);
+    let withoutUnits = withoutAmount.slice(withoutAmount.indexOf(' ') + 1);
+    result.push(withoutUnits);
+  });
+  // for(let i = 0; i < recipe.ingredients.length; i++){
+  //   let idxOfIngredients = recipe.ingredients[i];
+  //   let space = idxOfIngredients.indexOf(' ');
+  //   let foodItem = idxOfIngredients.slice(space + 1);
+  //   let nextSpace = idxOfIngredients.indexOf(' ');
+  //   if(nextSpace !== -1){
+  //     foodItem = foodItem.slice(0, nextSpace);
+  //   }
+  //   result.push(foodItem);
+  // }
   return result;
 };
 
