@@ -36,8 +36,9 @@ Write a function named removeThree that takes an index and an array. The functio
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
-  let deleteArr = arr.splice(idx, 3);
-  return deleteArr;
+  arr.splice(idx, 3);
+  return arr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,7 +67,9 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-
+  for(let i = 0; i <= str.length; i++){
+    result.push(str.slice(i));
+  }
   return result;
 };
 
@@ -79,7 +82,8 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-  // Solution code here...
+  let newArr = arr.split('');
+  return newArr;
 };
 
 
@@ -126,7 +130,16 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  for(let i = 0; i < recipe.ingredients.length; i++){
+    let idxOfIngredients = recipe.ingredients[i];
+    let space = idxOfIngredients.indexOf(' ');
+    let foodItem = idxOfIngredients.slice(space + 1);
+    let nextSpace = idxOfIngredients.indexOf(' ');
+    if(nextSpace !== -1){
+      foodItem = foodItem.slice(0, nextSpace);
+    }
+    result.push(foodItem);
+  }
   return result;
 };
 
