@@ -108,7 +108,7 @@ Write a function named containsWorld that takes in a string or number of any len
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
-  let worldTest = /[world][WORLD]/g;
+  let worldTest = /\bworld\b/g;
   return worldTest.test(input);
 };
 
@@ -121,8 +121,8 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  let capitalTest = /[A-Z]/g;
-  return capitalTest.match(str);
+  let capitalTest = /\b[A-Z]\b/g;
+  return str.match(capitalTest);
 };
 
 /* ------------------------------------------------------------------------------------------------
