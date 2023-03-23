@@ -96,7 +96,8 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  // Solution code here...
+  let numTest = /\d/g;
+  return numTest.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -107,7 +108,8 @@ Write a function named containsWorld that takes in a string or number of any len
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
-  // Solution code here...
+  let worldTest = /[world][WORLD]/g;
+  return worldTest.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -119,7 +121,8 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  let capitalTest = /[A-Z]/g;
+  return capitalTest.match(str);
 };
 
 /* ------------------------------------------------------------------------------------------------
