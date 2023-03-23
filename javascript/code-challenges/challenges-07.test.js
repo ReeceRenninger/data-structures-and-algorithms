@@ -135,6 +135,7 @@ const listFoods = (recipe) => {
     let withoutUnits = withoutAmount.slice(withoutAmount.indexOf(' ') + 1);
     result.push(withoutUnits);
   });
+  return result;
   // for(let i = 0; i < recipe.ingredients.length; i++){
   //   let idxOfIngredients = recipe.ingredients[i];
   //   let space = idxOfIngredients.indexOf(' ');
@@ -145,7 +146,6 @@ const listFoods = (recipe) => {
   //   }
   //   result.push(foodItem);
   // }
-  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
