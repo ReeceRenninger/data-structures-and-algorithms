@@ -39,7 +39,7 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
-  return Object.keys()
+  return Object.values(obj).includes(value);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,9 +60,10 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ]
 
 ------------------------------------------------------------------------------------------------ */
-
+// !! I don't know why the brackets are required around the map name, number. Ask Cameron / Audrey tomorrow.
 const updateNumbers = (obj) => {
-  // Solution code here...
+  let hrArray = Object.entries(obj).map(([name, number]) => `${name}: ${number}`);
+  return hrArray;
 };
 
 
@@ -118,7 +119,10 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
+  for (let e of arr) {
+    houses.push(e.house);
+
+  }
   return houses;
 };
 
@@ -135,9 +139,13 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+  for (let person of arr) {
+    if (person.name === character) {
+      Object.keys(person)
+    }
+  }
+}
 
-};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
