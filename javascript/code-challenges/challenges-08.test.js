@@ -113,8 +113,8 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  let allCapWords = str.match(/\b[A-Z][A-Z0-9]+\b/g);
-  return allCapWords;
+  let regex = /\b[A-Z][a-z]*\b/g;
+  return str.match(regex) || [];
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -124,8 +124,8 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  let cityCapitalLetters = /^[A-J]/i;
-  return cityCapitalLetters.match(arr);
+  const regex = /^[A-J]/i;
+  return arr.filter(city => regex.test(city));
 };
 
 /* ------------------------------------------------------------------------------------------------
