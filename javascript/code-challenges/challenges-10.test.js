@@ -88,10 +88,10 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  const grandTotal = new Array(12).fill(0); //make an array and fill with zeros to add on to
-  for (let i = 0; i < stores.length; i++) {
-    const storeSales = stores[i];
-    for (let j = 0; j < storeSales.length; j++) {
+  let grandTotal = new Array(12).fill(0); //make an array and fill with zeros to add on to
+  for (let i = 0; i < stores.length; i++) { // went back and looked at salmon cookies for this.
+    let storeSales = stores[i]; // i iterates over and sets the storeSales of store[i]
+    for (let j = 0; j < storeSales.length; j++) { //j iterates over the new storeSales and gets the totals per hour
       grandTotal[j] += storeSales[j]; // add sales for each hour to grandTotal
     }
   }
