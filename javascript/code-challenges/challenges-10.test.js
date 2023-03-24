@@ -58,10 +58,9 @@ const totalSum = (matrix) => {
   matrix.forEach(nestedArr => {
     nestedArr.forEach(number =>{
       sum += number;
-      console.log(sum); // returns 81 but not passing even though test calls for 81.....
     });
-    return sum;
   });
+  return sum;
 };
 
 
@@ -110,7 +109,17 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
+  let newData = [];
 
+  hours.forEach((hour, index) => {
+    let objectData = {
+      sales: `${data[index]} cookies`,
+      time: hour
+    };
+    newData.push(objectData);
+  });
+
+  return newData;
 };
 
 /* ------------------------------------------------------------------------------------------------
