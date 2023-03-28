@@ -37,7 +37,7 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   let sum = 0;
-  input.map(e => e).filter(e => {
+  input.flat().filter(e => {
     if (e === target) {
       sum++;
     }
@@ -57,9 +57,8 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
-  return input.reduce((acc, val) => {
-    return (acc + val).reduce((acc, val) => acc + val, 0);
-  }, 0);
+  return input.flat().reduce((acc, val) => acc + val);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,6 +79,7 @@ const divisibleByFiveTwoToThePower = (input) => {
       .map(num => Math.pow(2, num));
   });
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -144,7 +144,11 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
-  // Solution code here...
+  let people = data.filter(names => names.gender === 'male' || names.gender === 'female').map(e => e.name);
+  console.log(people);
+  return people.join(' and ');
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -154,7 +158,17 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-  // Solution code here...
+  let newArr = data.map(e => {
+    return {
+      name: e.name,
+      height: e.height
+    };
+  });
+
+  let finalArr = newArr.sort((a, b)=> a.height - b.height);
+  console.log(finalArr);
+  return finalArr[0].name;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
