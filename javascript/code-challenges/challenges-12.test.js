@@ -33,7 +33,7 @@ If the word is between 5 and 10 characters long, return true. Otherwise, return 
 
 const validateWord = (word) => {
   const pattern = /^\w{5,10}$/; // a word consisting of 5 to 10 word characters
-  if(pattern.test(word)){
+  if (pattern.test(word)) {
     return true;
   } else {
     return false;
@@ -49,7 +49,8 @@ If it does, return true. If not, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const hasNumber = (string) => {
-  // Solution code here...
+  const regex = /^[A-Za-z]+\d+/;
+  return regex.test(string);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -69,7 +70,9 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
-  // Solution code here...
+  // I found this online but its still not passing every portion of the test...
+  const regex = /^[A-Za-z0-9]+([._]?[A-Za-z0-9]+)*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)*(\.(com|net|org))$/;
+  return regex.test(email);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -94,7 +97,8 @@ Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePhoneNumber = (phoneNumber) => {
-  // Solution code here...
+  const regex = /^(\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}$/;
+  return regex.test(phoneNumber);
 };
 
 /* ------------------------------------------------------------------------------------------------
