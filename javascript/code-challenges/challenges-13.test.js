@@ -7,15 +7,13 @@ Write a function named longestString that takes in an array of strings and retur
 ------------------------------------------------------------------------------------------------ */
 
 const longestString = (arr) => {
-  let longestWord = arr.reduce((acc, val, idx) => {
-    if (val.length > arr[acc].length) {
-      return idx;
-    } else {
-      return acc;
+  let longStr = '';
+  arr.forEach(str => {
+    if (str.length > longStr.length) {
+      longStr = str;
     }
   });
-  console.log(longestWord);
-  return longestWord;
+  return arr.indexOf(longStr);
 };
 
 /* ------------------------------------------------------------------------------------------------
