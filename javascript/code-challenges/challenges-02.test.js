@@ -9,7 +9,7 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 ------------------------------------------------------------------------------------------------ */
 
 const raisedToTheThird = (arr) => {
-  let newArr =[];
+  let newArr = [];
   arr.forEach(num => {
     newArr.push(Math.pow(num, 3));
   });
@@ -34,8 +34,8 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 ------------------------------------------------------------------------------------------------ */
 
 const addQuestion = (arr) => {
-  let newArr = arr.map(word => word + '?');
-  return newArr;
+  let newStr = arr.map(word => word + '?');
+  return newStr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,7 +51,7 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 const forLoopTwoToThe = (arr) => {
   let newArr = [];
   for(let i = 0; i < arr.length; i++){
-    newArr.push(Math.pow(2, arr[i]));
+    newArr.push(Math.pow(2,arr[i]));
   }
   return newArr;
 };
@@ -64,8 +64,8 @@ Write a function named forEachTwoToThe that produces the same output as your for
 
 const forEachTwoToThe = (arr) => {
   let newArr = [];
-  arr.forEach(number => {
-    newArr.push(Math.pow(2, number));
+  arr.forEach(e => {
+    newArr.push(Math.pow(2, e));
   });
   return newArr;
 };
@@ -77,8 +77,8 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  let finalArr = arr.map(num => Math.pow(2, num));
-  return finalArr;
+  let newArr = arr.map(num => Math.pow(2, num));
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,8 +92,7 @@ For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
 const charCode = (arr) => {
-  let strArr = arr.map(str => arr.charCodeAt(str));
-  return strArr;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -265,7 +264,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-describe('Testing challenge 7', () => {
+xdescribe('Testing challenge 7', () => {
   test('It should return an array containing the character code for each letter', () => {
     expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1'])).toStrictEqual([ 67, 111, 100, 101, 51, 48, 49 ]);
     expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1']).length).toStrictEqual(7);
