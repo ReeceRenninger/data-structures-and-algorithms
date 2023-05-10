@@ -25,7 +25,7 @@ let starWarsPeople = [
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
-  let tallToShort = starWarsArr.sort((a,b) => b.height-a.height);
+  let tallToShort = starWarsArr.sort((a, b) => b.height - a.height);
   return tallToShort;
 };
 
@@ -38,7 +38,6 @@ Write a function named removeThree that takes an index and an array. The functio
 const removeThree = (idx, arr) => {
   arr.splice(idx, 3);
   return arr;
-
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -130,22 +129,13 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  recipe.ingredients.forEach(ingredient => {
-    let withoutAmount = ingredient.slice(ingredient.indexOf(' ') +1);
-    let withoutUnits = withoutAmount.slice(withoutAmount.indexOf(' ') + 1);
-    result.push(withoutUnits);
+  recipe.ingredients.forEach(e => {
+    let noAmount = e.slice(e.indexOf(' ') + 1);
+    let noUnits = noAmount.slice(noAmount.indexOf(' ') + 1);
+    console.log(result);
+    result.push(noUnits);
   });
   return result;
-  // for(let i = 0; i < recipe.ingredients.length; i++){
-  //   let idxOfIngredients = recipe.ingredients[i];
-  //   let space = idxOfIngredients.indexOf(' ');
-  //   let foodItem = idxOfIngredients.slice(space + 1);
-  //   let nextSpace = idxOfIngredients.indexOf(' ');
-  //   if(nextSpace !== -1){
-  //     foodItem = foodItem.slice(0, nextSpace);
-  //   }
-  //   result.push(foodItem);
-  // }
 };
 
 /* ------------------------------------------------------------------------------------------------
