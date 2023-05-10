@@ -60,7 +60,6 @@ const sortByChildren = (charArray) => {
       return a.children.length - b.children.length;
     }
   });
-
 };
 
 /* ------------------------------------------------------------------------------------------------
