@@ -9,10 +9,10 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
-  let bigNum = arr.reduce((acc, curVal) => Math.max(acc, curVal));
-  return bigNum;
-
+  let largeNum = arr.reduce((acc, curVal) => Math.max(acc, curVal));
+  return largeNum;
 };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -60,10 +60,10 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ]
 
 ------------------------------------------------------------------------------------------------ */
-// !! I don't know why the brackets are required around the map name, number. Ask Cameron / Audrey tomorrow.
+
 const updateNumbers = (obj) => {
-  let hrArray = Object.entries(obj).map(([name, number]) => `${name}: ${number}`);
-  return hrArray;
+  let newArr = Object.entries(obj).map(([name, number]) => `${name}: ${number}`);
+  return newArr;
 };
 
 
@@ -119,10 +119,9 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  for (let e of arr) {
+  arr.forEach(e => {
     houses.push(e.house);
-
-  }
+  });
   return houses;
 };
 
@@ -139,23 +138,16 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-
   let hasChildren = false;
   arr.forEach(person => {
     if(person.name === character){
-      let values = Object.values(person);
-
-      values.length === 4 ? hasChildren = true : hasChildren;
+      let newValue = Object.values(person);
+      newValue.length === 4 ? hasChildren = true: hasChildren;
     }
   });
   return hasChildren;
-  // for (let person of arr) {
-  //   if (person.name === character) {
-  //     Object.keys(person)
-  //   }
-  // }
-};
 
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
