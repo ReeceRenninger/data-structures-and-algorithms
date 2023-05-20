@@ -65,7 +65,7 @@ class LinkedList {
       result = `${result} -> ${current.value} ->`; // result gets current.value added on each iteration
       current = current.next; // current.next is invoked to move to the next node in the list
     }
-    result = `${result} -> `, null;
+    result += null;
     return result;
   }
 }

@@ -56,7 +56,15 @@ describe('Linked List', () => {
     expect(list.includes('f')).toEqual(false);
   });
 
-  
+  test('Can properly return a collection of all values in the linked list', () =>{
+    const list = new LinkedList();
+    list.append('a');
+    list.append('b');
+    list.append('c');
+
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> NULL');
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> NULL');
+  });
 
 
 });
