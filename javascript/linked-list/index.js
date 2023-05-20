@@ -60,12 +60,13 @@ class LinkedList {
 
   toString() {
     let current = this.head;
-    let result = ''; // empty string to fill
+    let result = `{ ${ current.value } }`; // initialize variable with first value
+    current = current.next; // have move the current to next to prevent it from doubling up on the first value
     while (current) {
-      result = `${result} -> ${current.value} ->`; // result gets current.value added on each iteration
+      result = `${result} -> { ${current.value} }`; // result gets current.value added on each iteration
       current = current.next; // current.next is invoked to move to the next node in the list
     }
-    result += null;
+    result += ' -> NULL'; // once while loop is exited we add in the required NULL ending
     return result;
   }
 }

@@ -63,7 +63,6 @@ describe('Linked List', () => {
     list.append('c');
 
     expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> NULL');
-    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> NULL');
   });
 
 
