@@ -24,6 +24,6 @@ To run your tests
 
 - [Challenge 01: Array Reverse](./javascript/array-reverse/README.md)
 - [Challenge 02: Array Insert Shift](./javascript/array-insert-shift/README.md)
-
+- [Challenge 03: Linked Lists](./javascript/linked-list/index.js)
 
 - Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
