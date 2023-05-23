@@ -26,5 +26,6 @@ To run your tests
 - [Challenge 02: Array Insert Shift](./javascript/array-insert-shift/README.md)
 - [Challenge 03: Linked Lists](./javascript/linked-list/README.md)
 - [Challenge 04: Linked List Insertion](./javascript/linked-list-insertion/README.md)
+- [Challenge 05: Linked List Kth from end](./javascript/linked-list/linked-list-kth/README.md)
 
 - Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.

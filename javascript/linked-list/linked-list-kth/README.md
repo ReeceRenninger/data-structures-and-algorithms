@@ -20,6 +20,7 @@ My partner and I ended up utilizing google fu to find sample codes that were sim
 
 npm test linked-list , I added this method onto the original challenge as instructed.
 
+I believe my test will pass, I got help from chat GPT by plugging in :
+create a jest test based off the inputted working code.  That resulted in my test in the [linked-list.test.js](../__tests__/linked-list.test.js).
 
-
-
+<!-- Come back to try and complete this when I complete the lab -->
