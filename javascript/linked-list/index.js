@@ -34,17 +34,6 @@ class LinkedList {
     current.next = node; //
   }
 
-  // // this will iterate along the linked list and do something
-  // traversal() {
-  //   let current = this.head;
-
-  //   while (current) {
-  //     // do something here
-  //     console.log(current.value);
-  //     //this moves us to the next node
-  //     current = current.next;
-  //   }
-  // }
 
   includes(value) {
     let current = this.head;
@@ -60,7 +49,7 @@ class LinkedList {
 
   toString() {
     let current = this.head;
-    let result = `{ ${ current.value } }`; // initialize variable with first value
+    let result = `{ ${current.value} }`; // initialize variable with first value
     current = current.next; // have move the current to next to prevent it from doubling up on the first value
     while (current) {
       result = `${result} -> { ${current.value} }`; // result gets current.value added on each iteration
@@ -68,6 +57,27 @@ class LinkedList {
     }
     result += ' -> NULL'; // once while loop is exited we add in the required NULL ending
     return result;
+  }
+
+
+  //!! Code Challenge 07: 
+  kthFromEnd(head, k) {
+    let p1 = this.head;
+    let p2 = this.head;  // Move p2 ahead by k steps
+
+    for (let i = 0; i < k; i++) {
+      if (p2 === null) {
+        return null; // Invalid k value, linked list is shorter
+      }
+      p2 = p2.next;
+
+    }  // Move both pointers until p2 reaches the end while
+    (p2 !== null && p2.next !== null) {
+      p1 = p1.next;
+      p2 = p2.next;
+    }
+    return p1.value;
+
   }
 }
 
