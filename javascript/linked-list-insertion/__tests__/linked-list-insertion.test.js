@@ -2,7 +2,7 @@
 
 const LinkedList = require('../index');
 
-describe ('Linked list', () => {
+describe('Linked list', () => {
   test('works', () => {
     expect(true).toBeTruthy();
   });
@@ -19,7 +19,21 @@ describe ('Linked list', () => {
 
   test('can successfully insert a node after a value is found', () => {
     const list = new LinkedList();
+    list.append('1');
+    list.append('3');
+    list.append('2');
+    list.append('5');
+  });
 
+  test('can successfully insert a node BEFORE a value is found', () => {
+    const list = new LinkedList();
+    list.append('1');
+    list.append('3');
+    list.append('2');
+    list.append('5');
   });
 
 });
+
+
+
