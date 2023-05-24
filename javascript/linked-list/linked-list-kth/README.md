@@ -10,7 +10,7 @@ Write the following method for the Linked List class:
 
 ## Whiteboard Process
 
-![kth from end linked list](../../assets/kthFromEnd-whiteboard.png)
+![kth from end linked list](../../../assets/kthFromEnd-whiteboard.png)
 
 ## Approach & Efficiency
 
