@@ -47,6 +47,32 @@ describe('Linked List', () => {
     expect(list.includes('a')).toEqual(true);
   });
 
+  test('can successfully append a node into the linked list', () => {
+    const list = new LinkedList();
+    list.append('1');
+    list.append('3');
+    list.append('2');
+    list.append('5');
+
+    expect(list.includes('5')).toEqual(true);
+  });
+
+  test('can successfully insert a node after a value is found', () => {
+    const list = new LinkedList();
+    list.append('1');
+    list.append('3');
+    list.append('2');
+    list.append('5');
+  });
+
+  test('can successfully insert a node BEFORE a value is found', () => {
+    const list = new LinkedList();
+    list.append('1');
+    list.append('3');
+    list.append('2');
+    list.append('5');
+  });
+
   test('Will return false if a specific value is NOT found within the linked list', () => {
     const list = new LinkedList();
     list.append('a');
@@ -83,6 +109,22 @@ describe('Linked List', () => {
     expect((head, 2)).toBe(4);
     expect((head, 3)).toBe(3);
     expect((head, 1)).toBe(5);
+  });
+
+  //zip list test attempt
+  test('should zip two linked lists correctly', () => {
+    const firstList = new LinkedList();
+    firstList.append('a');
+    firstList.append('b');
+    firstList.append('c');
+
+    const secondList = new LinkedList();
+    secondList.append('a');
+    secondList.append('b');
+    secondList.append('c');
+
+    expect(firstList.includes('{ a } -> { b } -> { c }')).toEqual(true);
+    expect(secondList.includes('{ a } -> { b } -> { c }')).toEqual(true);
   });
 
 });
