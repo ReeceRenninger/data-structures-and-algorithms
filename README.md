@@ -34,5 +34,5 @@ To run your tests
 
 - [Challenge 08: Linked List Zip](./javascript/linked-list/linked-list-zip/README.md)
 
-- [Challenge 09: Stacks and Queues](./javascript/stack-and-queue/README.md)
+- [Challenge 10: Stacks and Queues](./javascript/stack-and-queue/README.md)
 
