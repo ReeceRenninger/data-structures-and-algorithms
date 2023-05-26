@@ -17,15 +17,29 @@ Implement stack and queues that will pass all the provided tests:
     Can successfully instantiate an empty queue
     Calling dequeue or peek on empty queue raises exception
 
-
-
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+
+Whiteboard was taken from lecture this challenge
+
+![Alt text](../../assets/Stack&Que-IntroWhiteBoard.png)
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+After following along with Ryan throughout the lecture I was able to figure out the stack tests which resulted in me being able to build out the queue tests up until the calling dequeue or peek on empty queue tests.  I was unable to get that test to pass so I utilized ChatGPT to help me fix that portion of the test.
+
+Stacks Big O time and space:
+push(): O(1) & O(1).
+pop(): O(1) & O(1).
+peek(): O(1) & O(1).
+isEmpty(): O(1) & O(1).
+
+Queue Big O time and space:
+enqueue(): O(1) & O(1).
+dequeue(): O(1) & O(1).
+peek(): O(1) & O(1).
+isEmpty(): O(1) & O(1).
 
 ## Solution
-<!-- Show how to run your code, and examples of it in action -->
 
-
+npm test to run all suites or npm test (fileName)
+![Alt text](../../assets/Screenshot%202023-05-26%20153405.png)
