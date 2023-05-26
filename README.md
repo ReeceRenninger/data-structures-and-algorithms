@@ -23,10 +23,16 @@ To run your tests
 ## Table of Contents
 
 - [Challenge 01: Array Reverse](./javascript/array-reverse/README.md)
-- [Challenge 02: Array Insert Shift](./javascript/array-insert-shift/README.md)
-- [Challenge 03: Linked Lists](./javascript/linked-list/README.md)
-- [Challenge 04: Linked List Insertion](./javascript/linked-list-insertion/README.md)
-- [Challenge 07: Linked List Kth from end](./javascript/linked-list/linked-list-kth/README.md)
--[Challenge 08](./javascript/linked-list/linked-list-zip/README.md)
 
-- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+- [Challenge 02: Array Insert Shift](./javascript/array-insert-shift/README.md)
+
+- [Challenge 03: Linked Lists](./javascript/linked-list/README.md)
+
+- [Challenge 04: Linked List Insertion](./javascript/linked-list-insertion/README.md)
+
+- [Challenge 07: Linked List Kth from end](./javascript/linked-list/linked-list-kth/README.md)
+
+- [Challenge 08: Linked List Zip](./javascript/linked-list/linked-list-zip/README.md)
+
+- [Challenge 09: Stacks and Queues](./javascript/stack-and-queue/README.md)
+
