@@ -1,4 +1,4 @@
-# Challenge Title
+# Code Challenge 10: Stacks and Queues
 
 Implement stack and queues that will pass all the provided tests:
 
@@ -43,3 +43,30 @@ isEmpty(): O(1) & O(1).
 
 npm test to run all suites or npm test (fileName)
 ![Alt text](../../assets/Screenshot%202023-05-26%20153405.png)
+
+////////////////////////////////////////
+
+# CODE CHALLENGE 11: Create a queue with two stacks
+
+Develop a queue with 2 stacks that has the enqueue and dequeue methods we learned from our previous challenge
+
+## Whiteboard Process
+
+![Alt text](../../assets/Challenge11Whiteboard.png)
+<!-- Embedded whiteboard image -->
+
+## Approach & Efficiency
+
+We took 45 minutes to try and break the problem down into the smallest parts we could understand.  We were able to get everything up to the code, but had issues with solving the correct way to combine the stacks into one que so we asked ChatGPT for help with that portion.
+BIG O:
+Enqueue
+time/space: O(n) since we only manipulating elements within one queue after the initial while loop completes
+
+Dequeue
+time/space: O(1) since we are simply pulling the top off the stack
+
+## Solution
+
+npm test stack-and-queue will run all tests attached to these code challenges
+
+![Alt text](../../assets/testsPassingPseudoQueue.png)
