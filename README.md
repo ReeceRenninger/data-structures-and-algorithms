@@ -36,3 +36,5 @@ To run your tests
 
 - [Challenge 10: Stacks and Queues](./javascript/stack-and-queue/README.md)
 
+- [Challenge 11: Queue built with Two Stacks](./javascript/stack-and-queue/README.md)
+

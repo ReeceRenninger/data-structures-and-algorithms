@@ -92,5 +92,32 @@ class Queue {
     return this.front === null;
   }
 }
+//!! CODE CHALLENGE 11
 
-module.exports = { Stack, Queue };
+class PseduoQueue {
+  constructor () {
+    this.stackOne = [];
+    this.stackTwo = [];
+  }
+
+  enqueue(value){
+    while(this.stackOne.length > 0){
+      this.stackTwo.push(this.stackOne.pop());
+    }
+    this.stackOne.push(value);
+
+    while(this.stackTwo.length > 0){
+      this.stackOne.push(this.stackTwo.pop());
+    }
+  }
+
+  dequeue(){
+    if(this.stackOne.length === 0 ){
+      return null;
+    }
+    return this.stackOne.pop();
+  }
+
+}
+
+module.exports = { Stack, Queue, PseduoQueue };
