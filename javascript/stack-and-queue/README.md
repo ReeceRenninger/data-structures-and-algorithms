@@ -97,3 +97,32 @@ time/space: O(1) since we are simply pulling the top off the stack using shift.
 npm test stack-and-queue will run all tests attached to these code challenges.
 
 ![Alt text](../../assets/testsPassingAnimalShelter.png)
+
+////////////////////////////////////////////////
+
+# Challenge Title
+<!-- Description of the challenge -->
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+
+
+//////////////////////////////////////////////////
+
+# Challenge Title
+<!-- Description of the challenge -->
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
