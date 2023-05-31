@@ -70,3 +70,30 @@ time/space: O(1) since we are simply pulling the top off the stack
 npm test stack-and-queue will run all tests attached to these code challenges
 
 ![Alt text](../../assets/testsPassingPseudoQueue.png)
+
+///////////////////////////////////////////////////
+
+# CODE CHALLENGE 12: Create a queue with two Stacks containing objects: AnimalShelter class
+
+Develop a queue with 2 stacks that has the enqueue and dequeue methods we learned from our previous challenge, that expands on containing objects with multiple properties to assign to stacks based on species and preference.
+
+## Whiteboard Process
+
+![Alt text](../../assets/challenge12Whiteboard.png)
+
+## Approach & Efficiency
+
+We took 45 minutes to try and break the problem down into the smallest parts we could understand.  We were able to get everything up to the code, but had issues with solving the correct way to combine the stacks into one que so we asked ChatGPT for help with that portion.
+
+BIG O:
+Enqueue
+time/space: O(n) since we only manipulating elements within one queue at any given time as species types are pushed into their matching arrays
+
+Dequeue
+time/space: O(1) since we are simply pulling the top off the stack using shift.
+
+## Solution
+
+npm test stack-and-queue will run all tests attached to these code challenges.
+
+![Alt text](../../assets/testsPassingAnimalShelter.png)
