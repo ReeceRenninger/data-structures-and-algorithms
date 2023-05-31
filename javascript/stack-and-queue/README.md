@@ -84,6 +84,7 @@ Develop a queue with 2 stacks that has the enqueue and dequeue methods we learne
 ## Approach & Efficiency
 
 We took 45 minutes to try and break the problem down into the smallest parts we could understand.  We were able to get everything up to the code, but had issues with solving the correct way to combine the stacks into one que so we asked ChatGPT for help with that portion.
+
 BIG O:
 Enqueue
 time/space: O(n) since we only manipulating elements within one queue at any given time as species types are pushed into their matching arrays
@@ -93,5 +94,6 @@ time/space: O(1) since we are simply pulling the top off the stack using shift.
 
 ## Solution
 
-npm test stack-and-queue will run all tests attached to these code challenges
+npm test stack-and-queue will run all tests attached to these code challenges.
 
+![Alt text](../../assets/testsPassingAnimalShelter.png)
