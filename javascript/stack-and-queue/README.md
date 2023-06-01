@@ -100,18 +100,22 @@ npm test stack-and-queue will run all tests attached to these code challenges.
 
 ////////////////////////////////////////////////
 
-# Challenge Title
-<!-- Description of the challenge -->
+# CODE CHALLENGE 13: Multi-bracket Validation
+
+Write a function called validate brackets that accepts strings as arguments and returns a boolean whether or not the brackets in the string are balanced.
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+
+![Alt text](../../assets/challenge13Whiteboard.png)
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+My partner and I got about 50% of the way through the code portion of the whiteboard.  We were able to figure out most of the logic but we hit a wall with trying to figure out how to do a comparison of the open and close brackets are their indexed positions to solve the issue.  We were getting near the one hour mark so we utilized ChatGPT to help figure out what we were missing.  We got really close so I felt proud of that since the question felt much harder than yesterdays.
+BIG O time and space is O(n) since we are only every manipulating one index position while comparing it to the created strings to test against and when the logic portion of comparing them to their indexed position we are only comparing a variable against an indexed position.
 
 ## Solution
-<!-- Show how to run your code, and examples of it in action -->
-
+npm test while inside the stack-and-queue folder to run all tests
+![Alt text](../../assets/Screenshot%202023-06-01%20142104.png)
 
 //////////////////////////////////////////////////
 

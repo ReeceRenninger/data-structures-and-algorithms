@@ -39,3 +39,5 @@ To run your tests
 - [Challenge 11: Queue built with Two Stacks](./javascript/stack-and-queue/README.md)
 
 - [Challenge 12: AnimalShelter queue](./javascript/stack-and-queue/README.md)
+
+- [Challenge 13: Stacks, Queues, and Brackets](./javascript/stack-and-queue/README.md)
