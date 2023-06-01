@@ -160,7 +160,27 @@ class AnimalShelter {
 
 
 //!! CHALLENGE 13:
+function validateBrackets(string) {
+  const stack = [];
+  const openBrackets = ['(', '[', '{'];
+  const closeBrackets = [')', ']', '}'];
+
+  for (let i = 0; i < string.length; i++) {
+    const currentBracket = string[i];
+
+    if (openBrackets.includes(currentBracket)) {
+      stack.push(currentBracket);
+    } else if (closeBrackets.includes(currentBracket)) {
+      const matchingOpeningBracket = openBrackets[closeBrackets.indexOf(currentBracket)];
+
+      if (stack.length === 0 || stack.pop() !== matchingOpeningBracket) {
+        return false;
+      }
+    }
+  }
+
+  return stack.length === 0;
+}
 
 
-
-module.exports = { Stack, Queue, PseduoQueue, Animal, AnimalShelter };
+module.exports = { Stack, Queue, PseduoQueue, Animal, AnimalShelter, validateBrackets };
