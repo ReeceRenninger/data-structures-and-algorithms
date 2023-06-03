@@ -9,19 +9,19 @@ class Node {
 }
 
 // not required for Code challenge 15
-class KaryNode {
-  constructor(value, k) {
-    this.value = value;
-    this.children = new Array(k).fill(null);
-  }
-}
+// class KaryNode {
+//   constructor(value, k) {
+//     this.value = value;
+//     this.children = new Array(k).fill(null);
+//   }
+// }
 
-// not required for Code challenge 15
-class KaryTree {
-  constructor() {
-    this.root = null;
-  }
-}
+// // not required for Code challenge 15
+// class KaryTree {
+//   constructor() {
+//     this.root = null;
+//   }
+// }
 
 class Tree {
   constructor() {
@@ -85,20 +85,90 @@ class Tree {
 
 }
 
-let tree = new Tree();
-tree.root = new Node(10);
-tree.root.left = new Node(5);
-tree.root.right = new Node(15);
-tree.root.left.left = new Node(1);
-tree.root.left.right = new Node(8);
-tree.root.right.right = new Node(17);
+class BinarySearchTree extends Tree {
+  constructor() {
+    super();
+  }
 
-console.log('-------preOrder-------');
-let results = tree.preOrder();
-console.log('preOrder results:', results);
-console.log('-------inOrder-------');
-results = tree.inOrder();
-console.log('inOrder results:', results);
-console.log('-------postOrder-------');
-results = tree.postOrder();
-console.log('postOrder results:', results);
+  add(value) {
+    const newNode = new Node(value);
+
+    if (this.root === null) {
+      this.root = newNode;
+      return this;
+    }
+
+    const insert = (node) => {
+      if (value < node.value) {
+        if (node.left === null) {
+          node.left = newNode;
+          return this;
+        } else if (node.left !== null) {
+          return insert(node.left);
+        }
+      } else if (value > node.value) {
+        if (node.right === null) {
+          node.right = newNode;
+          return this;
+        } else if (node.right !== null) {
+          return insert(node.right);
+        }
+      } else {
+        return null;
+      }
+    };
+    insert(this.root);
+  }
+
+  containsValue(value) {
+    if (this.root === null) {
+      return false;
+    }
+
+    let current = this.root;
+    let found = false;
+
+    while (current && !found) {
+      if (value < current.value) {
+        current = current.left;
+      } else if (value > current.value) {
+        current = current.right;
+      } else { // value === current.value
+        found = true;
+      }
+    }
+    if (!found) {
+      return false;
+    }
+    return true;
+  }
+
+}
+
+// let tree = new Tree();
+// tree.root = new Node(10);
+// tree.root.left = new Node(5);
+// tree.root.right = new Node(15);
+// tree.root.left.left = new Node(1);
+// tree.root.left.right = new Node(8);
+// tree.root.right.right = new Node(17);
+// console.log('-------preOrder-------');
+// let results = tree.preOrder();
+// console.log('preOrder results:', results);
+// console.log('-------inOrder-------');
+// results = tree.inOrder();
+// console.log('inOrder results:', results);
+// console.log('-------postOrder-------');
+// results = tree.postOrder();
+// console.log('postOrder results:', results);
+
+
+module.exports = {
+  Node,
+  Tree,
+  BinarySearchTree,
+  // KaryNode,
+  // KaryTree,
+};
+
+

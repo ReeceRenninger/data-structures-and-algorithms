@@ -114,19 +114,8 @@ My partner and I got about 50% of the way through the code portion of the whiteb
 BIG O time and space is O(n) since we are only every manipulating one index position while comparing it to the created strings to test against and when the logic portion of comparing them to their indexed position we are only comparing a variable against an indexed position.
 
 ## Solution
+
 npm test while inside the stack-and-queue folder to run all tests
 ![Alt text](../../assets/Screenshot%202023-06-01%20142104.png)
 
-//////////////////////////////////////////////////
 
-# Challenge Title
-<!-- Description of the challenge -->
-
-## Whiteboard Process
-<!-- Embedded whiteboard image -->
-
-## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-
-## Solution
-<!-- Show how to run your code, and examples of it in action -->
