@@ -83,6 +83,28 @@ class Tree {
     return results;
   }
 
+
+  //!! CODE CHALLENGE 16: Find max value
+  maxValue() {
+    const results = [];
+    if(this.root === null){
+      return -1;
+    }
+    const traverse = (node) => {
+
+      if (node.left) {
+        traverse(node.left);
+      }
+      results.push(node.value); // performing our base case here makes this inOrder
+      if (node.right) {
+        traverse(node.right);
+      }
+    };
+    traverse(this.root);
+    let maxValue = results.pop();
+    return maxValue;
+  }
+
 }
 
 class BinarySearchTree extends Tree {
