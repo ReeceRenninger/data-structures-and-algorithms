@@ -33,18 +33,27 @@ npm test while in the directory folder of trees
 
 //////////////////////////////////////////////////
 
-# Challenge Title
-<!-- Description of the challenge -->
+# CODE CHALLENGE 16: Binary Tree Max Value
+
+Write the following method for the Binary Tree class
+
+    find maximum value
+        Arguments: none
+        Returns: number
+
+Find the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
 
+![Alt text](../../assets/CodeChallenge16.png)
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+We took the inorder approach to traversal through a binary tree.  We utilized the same traversal code but instead of returning the ENTIRE results array we are popping off the final value in the array and returning that. We originally though to slice the value off but that did not work as anticipated.
+We should have a time of O(n) and a space of O(h).
 
 ## Solution
-<!-- Show how to run your code, and examples of it in action -->
 
+npm test while in the tree directory
+![Alt text](../../assets/Screenshot%202023-06-06%20140354.png)
 //////////////////////////////////////////////////
 
 # Challenge Title

@@ -41,3 +41,7 @@ To run your tests
 - [Challenge 12: AnimalShelter queue](./javascript/stack-and-queue/README.md)
 
 - [Challenge 13: Stacks, Queues, and Brackets](./javascript/stack-and-queue/README.md)
+
+- [Challenge 15: Binary Tree and BST Implementation](./javascript/trees/README.md)
+
+- [Challenge 16: Binary Tree Max value](./javascript/trees/README.md)
