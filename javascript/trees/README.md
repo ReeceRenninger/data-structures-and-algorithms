@@ -56,18 +56,22 @@ npm test while in the tree directory
 ![Alt text](../../assets/Screenshot%202023-06-06%20140354.png)
 //////////////////////////////////////////////////
 
-# Challenge Title
-<!-- Description of the challenge -->
+# Code Challenge 17: Breadth First
+Write a function called breadth first
+Arguments: tree
+Return: list of all values in the tree, in the order they were encountered
+Note: utilize a breadth first approach to traversal
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
 
+![Alt text](../../assets/CodeChallenge17Whiteboard.png)
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+I used google fu with the help of my partner because we could not figure out how to even start this problem for almost 30 minutes. I got help from chatGPT to write the second test. I could figure out how to return an empty array if tree was empty but implementing the values to the adjacent nodes I couldn't figure out.
 
 ## Solution
-<!-- Show how to run your code, and examples of it in action -->
-
+npm test while in the tree directory
+![Alt text](../../assets/Screenshot%202023-06-07%20141936.png)
 //////////////////////////////////////////////////
 
 # Challenge Title

@@ -1,14 +1,17 @@
 `use strict`;
 
-const { BinarySearchTree, Tree, Node } = require(`../index.js`);
+const { BinarySearchTree, Tree, Node, TreeTraversal } = require(`../index.js`);
 
 // Code Challenge 15: Trees Tests
 describe(`Binary Tree`, () => {
   let bst;
   let tree;
+  let traversalTree;
+
   beforeEach(() => {
     bst = new BinarySearchTree();
     tree = new Tree();
+    traversalTree = new TreeTraversal();
   });
 
   // Can successfully instantiate an empty tree
@@ -80,4 +83,36 @@ describe(`Binary Tree`, () => {
 
     expect(tree.maxValue()).toEqual(15);
   });
+
+  //!!Code Challenge 17: Breadth first
+  test('TreeTraversal should return an empty array for an empty tree', () => {
+    const tree = null;
+    const expected = [];
+
+    const result = traversalTree.breadthFirst(tree);
+
+    expect(result).toEqual(expected);
+  });
+
+  test('TreeTraversal should return the correct values for each node', () => {
+    const tree = {
+      value: 1,
+      left: {
+        value: 2,
+        left: { value: 4 },
+        right: { value: 5 },
+      },
+      right: {
+        value: 3,
+        left: { value: 6 },
+        right: { value: 7 },
+      },
+    };
+    const expected = [1, 2, 3, 4, 5, 6, 7];
+
+    const result = traversalTree.breadthFirst(tree);
+
+    expect(result).toEqual(expected);
+  });
+
 });

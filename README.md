@@ -45,3 +45,5 @@ To run your tests
 - [Challenge 15: Binary Tree and BST Implementation](./javascript/trees/README.md)
 
 - [Challenge 16: Binary Tree Max value](./javascript/trees/README.md)
+
+- [Challenge 17: Breadth First](./javascript/trees/README.md)
