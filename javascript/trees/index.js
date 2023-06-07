@@ -87,7 +87,7 @@ class Tree {
   //!! CODE CHALLENGE 16: Find max value
   maxValue() {
     const results = [];
-    if(this.root === null){
+    if (this.root === null) {
       return -1;
     }
     const traverse = (node) => {
@@ -167,6 +167,42 @@ class BinarySearchTree extends Tree {
 
 }
 
+//!! CODE CHALLENGE 17: Breadth First
+class TreeTraversal {
+  breadthFirst(tree) {
+    if (!tree) {
+      return [];
+    }
+
+    const result = [];
+    const queue = [tree];
+
+    while (queue.length > 0) {
+      const node = queue.shift();
+      result.push(node.value);
+
+      if (node.left) {
+        queue.push(node.left);
+      }
+      if (node.right) {
+        queue.push(node.right);
+      }
+    }
+
+    return result;
+  }
+}
+
+
+module.exports = {
+  Node,
+  Tree,
+  BinarySearchTree,
+  TreeTraversal,
+  // KaryNode,
+  // KaryTree,
+};
+
 // let tree = new Tree();
 // tree.root = new Node(10);
 // tree.root.left = new Node(5);
@@ -183,14 +219,4 @@ class BinarySearchTree extends Tree {
 // console.log('-------postOrder-------');
 // results = tree.postOrder();
 // console.log('postOrder results:', results);
-
-
-module.exports = {
-  Node,
-  Tree,
-  BinarySearchTree,
-  // KaryNode,
-  // KaryTree,
-};
-
 
