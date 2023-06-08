@@ -74,17 +74,31 @@ npm test while in the tree directory
 ![Alt text](../../assets/Screenshot%202023-06-07%20141936.png)
 //////////////////////////////////////////////////
 
-# Challenge Title
-<!-- Description of the challenge -->
+# Code Challenge 18: FizzBuzz with a k-ary tree
+
+    Write a function called fizz buzz tree
+    Arguments: k-ary tree
+    Return: new k-ary tree
+
+Determine whether or not the value of each node is divisible by 3, 5 or both. Create a new tree with the same structure as the original, but the values modified as follows:
+
+    If the value is divisible by 3, replace the value with “Fizz”
+    If the value is divisible by 5, replace the value with “Buzz”
+    If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+    If the value is not divisible by 3 or 5, simply turn the number into a String.
+
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+
+![Alt text](../../assets/Screenshot%202023-06-08%20134117.png)
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+My partner was unavailable so I tacked on to another group who had solved their whiteboard for the most part.  I tried to reverse work all of what they had done but it was extremely confusing on how they implemented the values into their tree after the fizzbuzz logic executed.  I understand how to iterate through with fizzbuzz but everything beyond that was out of my grasp.
 
 ## Solution
-<!-- Show how to run your code, and examples of it in action -->
+
+npm test while in the tree directory
 
 //////////////////////////////////////////////////
 
