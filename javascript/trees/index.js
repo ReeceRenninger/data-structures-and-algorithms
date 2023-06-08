@@ -8,20 +8,53 @@ class Node {
   }
 }
 
-// not required for Code challenge 15
-// class KaryNode {
-//   constructor(value, k) {
-//     this.value = value;
-//     this.children = new Array(k).fill(null);
-//   }
-// }
 
-// // not required for Code challenge 15
-// class KaryTree {
-//   constructor() {
-//     this.root = null;
-//   }
-// }
+class KaryNode {
+  constructor(value) {
+    this.value = value;
+    this.children = []; //this was : new Array(k).fill(null), give k as parameter if you change this back
+  }
+}
+
+class KaryTree {
+  constructor() {
+    this.root = null;
+  }
+}
+
+//!! CODE CHALLENGE 18: FizzBuzz K-ary tree
+function fizzBuzzTree(tree) {
+  if (!tree) {
+    return null;
+  }
+
+  function fizzBuzzHelper(node) {
+    if (node.value % 3 === 0 && node.value % 5 === 0) {
+      node.value = 'FizzBuzz';
+    } else if (node.value % 3 === 0) {
+      node.value = 'Fizz';
+    } else if (node.value % 5 === 0) {
+      node.value = 'Buzz';
+    } else {
+      node.value = node.value.toString();
+    }
+
+    for (let i = 0; i < node.children.length; i++) {
+      if (node.children[i]) {
+        node.children[i] = fizzBuzzHelper(node.children[i]);
+      }
+    }
+
+    return node;
+  }
+
+  const newTree = new KaryNode(tree.value, tree.children.length);
+  newTree.children = tree.children.map(child => fizzBuzzHelper(child));
+
+  return newTree;
+}
+
+
 
 class Tree {
   constructor() {
@@ -199,8 +232,9 @@ module.exports = {
   Tree,
   BinarySearchTree,
   TreeTraversal,
-  // KaryNode,
-  // KaryTree,
+  KaryNode,
+  KaryTree,
+  fizzBuzzTree
 };
 
 // let tree = new Tree();
