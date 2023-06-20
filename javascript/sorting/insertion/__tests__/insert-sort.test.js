@@ -1,7 +1,6 @@
 'use strict';
 
-const insertionSort = require('../index');
-const insert = require('../index');
+const { insertionSort, insert } = require('../index');
 
 describe('insertionSort', () => {
   it('should sort an array in ascending order', () => {

@@ -24,3 +24,5 @@ const insertionSort = (input) => {
 };
 
 insertionSort([5, 2, 4, 6, 1, 3]);
+
+module.exports = { insert, insertionSort };
