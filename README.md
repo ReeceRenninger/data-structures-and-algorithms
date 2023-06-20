@@ -47,3 +47,7 @@ To run your tests
 - [Challenge 16: Binary Tree Max value](./javascript/trees/README.md)
 
 - [Challenge 17: Breadth First](./javascript/trees/README.md)
+
+- [Challenge 18: FizzBuzz Tree](./javascript/trees/README.md)
+
+- [Challenge 26: Insertion Sort](./javascript/sorting/insertion/README.md)
