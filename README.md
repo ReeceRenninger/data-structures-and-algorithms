@@ -51,3 +51,5 @@ To run your tests
 - [Challenge 18: FizzBuzz Tree](./javascript/trees/README.md)
 
 - [Challenge 26: Insertion Sort](./javascript/sorting/insertion/README.md)
+
+- [Challenge 27: Merge Sort](./javascript/sorting/merge/README.md)
