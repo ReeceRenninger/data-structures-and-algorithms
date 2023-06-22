@@ -53,3 +53,5 @@ To run your tests
 - [Challenge 26: Insertion Sort](./javascript/sorting/insertion/README.md)
 
 - [Challenge 27: Merge Sort](./javascript/sorting/merge/README.md)
+
+- [Challenge 28: Movie Sort](./javascript/movie-sort/README.md)
