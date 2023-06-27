@@ -57,3 +57,5 @@ Today my partner showed up pretty late so I got to work on my own.  I knew the f
 ## Solution
 
 npm test hash-table.test.js
+
+![Alt text](<../../assets/Screenshot 2023-06-27 142124.png>)
