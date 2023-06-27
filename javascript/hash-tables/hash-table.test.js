@@ -63,9 +63,10 @@ describe('Hash Table', () => {
 
   });
 
+  //Code challenge 31 test
   test('Successfully returns a repeated word from a string', () => {
     const table = new HashTable(1024);
-    const string = 'Once upon a time, there was a brave princess who...';
+    const string = 'Once upon a time, there was a dumb coder who tried to learn hash maps...';
     const repeatedWord = table.repeatedWord(string);
     expect(repeatedWord).toEqual('a');
   });
