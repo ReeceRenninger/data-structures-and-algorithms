@@ -51,15 +51,15 @@ class HashTable {
   }
 
 
-  has(key){
+  has(key) {
     let position = this.hash(key);
     let result = this.buckets[position] ? true : false;
     return result;
   }
 
-  keys(){
+  keys() {
     let results = this.buckets.reduce((keysArr, bucket) => {
-      if(bucket){
+      if (bucket) {
         keysArr.push(Object.keys(bucket)[0]);
         return keysArr;
       } else {
@@ -67,6 +67,23 @@ class HashTable {
       }
     }, []);
     return results;
+  }
+
+  repeatedWord(string) {
+    const words = string.toLowerCase().split(/\W+/);
+    const hashMap = new Map();
+
+    for (let i = 0; i < words.length; i++) {
+      const word = words[i];
+
+      if (hashMap.has(word)) {
+        return word; // this will return the word if already found within hashmap
+      } else {
+        hashMap.set(word, true); // if the above if does not trigger we set the word into the hashmap to be checked against the following words
+      }
+    }
+    //if none repeating and words end is reached then default return
+    return 'No repeats found';
   }
 }
 

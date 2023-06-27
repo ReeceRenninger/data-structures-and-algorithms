@@ -1,4 +1,4 @@
-# Challenge Title: Hash Tables
+# Code Challenge 30: Hash Tables
 
 Implement a Hashtable Class with the following methods:
 
@@ -32,3 +32,30 @@ Today was following along with Ryan during implementation so no whiteboard was n
 ## Solution
 
 npm test hash-table.test.js
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+# Code Challenge 31: Hash Map repeating words
+
+
+    Write a function called repeated word that finds the first word to occur more than once in a string
+    Arguments: string
+    Return: string
+
+
+then create jest tests.
+
+## Whiteboard Process
+
+![Alt text](../../assets/CodeChallenge31WhiteBoard.png)
+
+
+## Approach & Efficiency
+
+Today my partner showed up pretty late so I got to work on my own.  I knew the first issue was going to be figuring out to break apart each word of the string and add it to something to compare off of.  I used online tools to help generate regex to get rid of white space/punctuation that would cause issues with adding just the word itself.  Then it was just trying to figure out how we can get the word to be added to a hash table and then check if it already exists.  I used a while loop to check if the word already existed and if it did, return that word.  If it didn't, add it to the hash table and continue on.  I think this is a pretty efficient way to do it, but I'm sure there are better ways to do it.
+
+## Solution
+
+npm test hash-table.test.js
+
+![Alt text](<../../assets/Screenshot 2023-06-27 142124.png>)

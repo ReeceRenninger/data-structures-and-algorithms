@@ -41,7 +41,7 @@ describe('Hash Table', () => {
     table.set('test yek', 'test value');
     table.set('tset key', 'test value');
     const hash = table.hash('test key');
-  
+
     expect(table.buckets[hash]).toBeDefined();
   });
 
@@ -61,6 +61,13 @@ describe('Hash Table', () => {
     const keys = table.keys();
     expect(keys).toEqual(['test key', 'test key two', 'test key three']);
 
+  });
+
+  test('Successfully returns a repeated word from a string', () => {
+    const table = new HashTable(1024);
+    const string = 'Once upon a time, there was a brave princess who...';
+    const repeatedWord = table.repeatedWord(string);
+    expect(repeatedWord).toEqual('a');
   });
 
 });
