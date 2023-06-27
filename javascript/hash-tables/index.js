@@ -26,7 +26,7 @@ class HashTable {
     let data = { [key]: value };
 
     // !! initial approach before refactoring
-    //linked list approach(so you can see it)
+    // linked list approach(so you can see it)
     // if (this.buckets[position]) {
     //   let bucket = this.buckets[position];
     //   bucket.add(data);
@@ -45,6 +45,8 @@ class HashTable {
     let position = this.hash(key);
     if (this.buckets[position]) {
       return this.buckets[position][key];
+    } else {
+      return null;
     }
   }
 
@@ -58,9 +60,8 @@ class HashTable {
   keys(){
     let results = this.buckets.reduce((keysArr, bucket) => {
       if(bucket){
-        let newKey = keysArr.push(Object.keys(bucket)[0]);
-        let newArr = [...keysArr, newKey ];
-        return newArr;
+        keysArr.push(Object.keys(bucket)[0]);
+        return keysArr;
       } else {
         return keysArr;
       }
@@ -70,27 +71,27 @@ class HashTable {
 }
 
 
-const table = new HashTable(1024);
+// const table = new HashTable(1024);
 
-console.log('table: ', table);
-let hashOne = table.hash('Reece');
-let hashTwo = table.hash('Ike');
-console.log('hashOne: ', hashOne);
-console.log('hashTwo: ', hashTwo);
+// console.log('table: ', table);
+// let hashOne = table.hash('Reece');
+// let hashTwo = table.hash('Ike');
+// console.log('hashOne: ', hashOne);
+// console.log('hashTwo: ', hashTwo);
 
-table.set('Reece', 'this is my value');
-table.set('Ike', 'this is his value');
-console.log('updated table: ', table);
+// table.set('Reece', 'this is my value');
+// table.set('Ike', 'this is his value');
+// console.log('updated table: ', table);
 
-console.log('get is working for Reece:', table.get('Reece'));
-console.log('get is working for Ike: ', table.get('Ike'));
+// console.log('get is working for Reece:', table.get('Reece'));
+// console.log('get is working for Ike: ', table.get('Ike'));
 
-console.log('has is working for Reece: ', table.has('Reece'));
-console.log('has is working for Ike: ', table.has('Ike'));
+// console.log('has is working for Reece: ', table.has('Reece'));
+// console.log('has is working for Ike: ', table.has('Ike'));
 
 
-let keys = table.keys();
-console.log('keys: ', keys);
+// let keys = table.keys();
+// console.log('keys: ', keys);
 
 
 module.exports = HashTable;
