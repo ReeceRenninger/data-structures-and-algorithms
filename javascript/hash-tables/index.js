@@ -69,6 +69,7 @@ class HashTable {
     return results;
   }
 
+  //!! Challenge 31 : Repeated Word
   repeatedWord(string) {
     const words = string.toLowerCase().split(/\W+/);
     const hashMap = new Map();
