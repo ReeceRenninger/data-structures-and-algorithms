@@ -55,3 +55,10 @@ To run your tests
 - [Challenge 27: Merge Sort](./javascript/sorting/merge/README.md)
 
 - [Challenge 28: Movie Sort](./javascript/movie-sort/README.md)
+
+- [Challenge 30: Hashmap Implementation](./javascript/hashmap/README.md)
+
+- [Challenge 32: Repeat Word](./javascript/repeated-word/README.md)
+
+- [Challenge 33: Tree Intersection](./javascript/treeIntersection/README.md)
+
