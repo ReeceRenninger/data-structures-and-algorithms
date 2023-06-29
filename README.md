@@ -58,7 +58,8 @@ To run your tests
 
 - [Challenge 30: Hashmap Implementation](./javascript/hashmap/README.md)
 
-- [Challenge 32: Repeat Word](./javascript/repeated-word/README.md)
+- [Challenge 31: Repeat Word](./javascript/repeated-word/README.md)
 
-- [Challenge 33: Tree Intersection](./javascript/treeIntersection/README.md)
+- [Challenge 32: Tree Intersection](./javascript/treeIntersection/README.md)
 
+- [Challenge 33: Left Join](./javascript/left-join/README.md)
