@@ -38,3 +38,26 @@ This was original implementation with Ryan G so we just followed along. Testing 
 ## Solution
 
 npm test graphs.test.js
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+# CODE CHALLENGE 36 : Breadth First for Graphs
+
+Write the following method for the Graph class:
+
+    breadth first
+    Arguments: Node
+    Return: A collection of nodes in the order they were visited.
+    Display the collection
+
+## Whiteboard Process
+
+![Alt text](../../assets/CodeChallenge36WhiteBoard.png)
+
+## Approach & Efficiency
+
+We used a queue to keep track of the nodes that we popped off from the graph. We used a set to keep track of the nodes that we visited. We used a while loop to iterate over the queue. We used a for loop to iterate over the neighbors of the current node/vertex. We used a if statement to check if the neighbor was in the set of visited nodes. If it was not, we added it to the set and the queue. We returned the set of visited nodes.
+
+## Solution
+
+npm test graphs.test.js

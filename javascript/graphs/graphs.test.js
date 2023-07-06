@@ -81,6 +81,26 @@ describe('Graph tests', () => {
     expect(neighbors[0].weight).toBe(5);
   });
 
+  test('Returns correct node values using a breadth first traversal', () => {
+    // const vertexA = graph.addVertex('A');
+    // const vertexB = graph.addVertex('B');
+    // const vertexC = graph.addVertex('C');
+    // const vertexD = graph.addVertex('D');
+    // const vertexE = graph.addVertex('E');
+    // const vertexF = graph.addVertex('F');
+
+    // graph.addDirectedEdge(vertexA, vertexB);
+    // graph.addDirectedEdge(vertexA, vertexC);
+    // graph.addDirectedEdge(vertexB, vertexD);
+    // graph.addDirectedEdge(vertexC, vertexE);
+    // graph.addDirectedEdge(vertexC, vertexF);
+    // graph.addDirectedEdge(vertexE, vertexF);
+
+    // const breadthFirstResults = graph.breadthFirst(vertexA);
+
+    // expect(breadthFirstResults).toEqual(['A', 'B', 'C', 'D', 'E', 'F']);
+  });
+
 
 
 });

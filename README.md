@@ -65,3 +65,5 @@ To run your tests
 - [Challenge 33: Left Join](./javascript/left-join/README.md)
 
 - [Challenge 35: Graph Implementation](./javascript/graphs/README.md)
+
+- [Challenge 36: Breadth First for Graphs](./javascript/graphs/README.md)
