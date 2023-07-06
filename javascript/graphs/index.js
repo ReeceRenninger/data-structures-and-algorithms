@@ -46,32 +46,6 @@ class Graph {
     return this.adjacencyList.size;
   }
 
-  breadthFirst(root, callback) {
-    const queue = [root];
-    const visited = new Set();
-    visited.add(root);
-    let current = null;
-
-    while(queue.length){
-      current = queue.pop();
-
-      //if callback exists, we use it to do the thing
-      if(callback){
-        callback(current.value);
-      }
-
-      //grab neighbor(s) if they exist
-      const neighbors = this.getNeighbors(current);
-      for(let edge of neighbors){
-        //if node has not been visited yet, add it to the visited set and the queue
-        if(!visited.has(edge.vertex)){
-          visited.add(edge.vertex);
-          queue.unshift(edge.vertex);
-        }
-      }
-    }
-    return visited; //return the set of visited nodes
-  }
 
   depthFirst(root, callback) {
     const stack = [root];
@@ -100,6 +74,33 @@ class Graph {
     return visited; //return the set of visited nodes
   }
 
+  //!! CODE CHALLENGE 36: breadthFirst traversal
+  breadthFirst(root, callback) {
+    const queue = [root];
+    const visited = new Set();
+    visited.add(root);
+    let current = null;
+
+    while(queue.length){
+      current = queue.pop();
+
+      //if callback exists, we use it to do the thing
+      if(callback){
+        callback(current.value);
+      }
+
+      //grab neighbor(s) if they exist
+      const neighbors = this.getNeighbors(current);
+      for(let edge of neighbors){
+        //if node has not been visited yet, add it to the visited set and the queue
+        if(!visited.has(edge.vertex)){
+          visited.add(edge.vertex);
+          queue.unshift(edge.vertex);
+        }
+      }
+    }
+    return visited; //return the set of visited nodes
+  }
 }
 
 const graph = new Graph();
