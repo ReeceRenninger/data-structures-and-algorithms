@@ -69,3 +69,5 @@ To run your tests
 - [Challenge 36: Breadth First for Graphs](./javascript/graphs/README.md)
 
 - [Challenge 37: Circular LL ](./javascript/circular-linkedList/README.md)
+
+- [Challenge 38: Leaf weight test with trees](./javascript/leaf-weight-tree/README.md)
